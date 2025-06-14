@@ -157,6 +157,76 @@ body {
   }
 }
 
+/* -----------------------------
+   📱 レスポンシブデザイン用 CSS追加
+----------------------------- */
+
+/* 基本：画像は幅に応じて縮小 */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* .contact-container 調整 */
+@media screen and (max-width: 768px) {
+  .contact-container {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .contact-container h2 {
+    font-size: 1.6em;
+  }
+
+  .contact-container p {
+    font-size: 1em;
+  }
+
+  .contact-form label {
+    font-size: 0.95em;
+  }
+
+  .original-button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .contact-title {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .contact-title img.contact-icon {
+    width: 30px;
+  }
+}
+
+/* モバイル用さらに調整（480px以下） */
+@media screen and (max-width: 480px) {
+  .main h1 {
+    font-size: 3rem;
+  }
+
+  .sf-underline {
+    font-size: 3rem !important;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .contact-container {
+    padding: 16px;
+  }
+
+  .original-button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+
 
 
 

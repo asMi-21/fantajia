@@ -131,10 +131,11 @@ body {
   max-width: 100%;
 }
 .logo {
-  height: 40px; /* 小さめで控えめ♡ */
+  height: 50px; /* 小さめで控えめ♡ */
   padding: 5px 0;
   opacity: 0.8;
   transition: opacity 0.3s ease;
+   position: fixed;
 }
 
 .logo:hover {
@@ -318,5 +319,143 @@ footer{
   .main nav a {
     font-size: 1rem;
     padding: 0.2rem 0.6rem;
+  }
+}
+/* ----------------------------
+   📱 レスポンシブ強化（sakuhin）
+---------------------------- */
+@media screen and (max-width: 1024px) {
+  .work-details {
+    padding-left: 30px;
+    margin: 30px;
+  }
+
+  .work-details h2 {
+    font-size: 1.2em;
+  }
+
+  .work-details p {
+    font-size: 0.95em;
+  }
+
+  .work-item img {
+    height: 280px;
+    margin-left: 0;
+  }
+
+  .logo2 {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main h1 {
+    font-size: 3.5rem;
+  }
+
+  .sf-underline {
+    font-size: 2.5rem;
+  }
+
+  .work-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .work-details {
+    padding: 10px;
+    margin: 20px 0;
+    width: 100%;
+  }
+
+  .work-item img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .main nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main h1 {
+    font-size: 2.5rem;
+  }
+
+  .sf-underline {
+    font-size: 2rem;
+  }
+
+  .work-list h1 {
+    font-size: 2em;
+  }
+
+  .work-details h2 {
+    font-size: 1.1em;
+  }
+
+  .work-details p {
+    font-size: 0.9em;
+  }
+
+  .work-details button {
+    font-size: 0.9em;
+    padding: 8px 16px;
+  }
+
+  .stone {
+    height: 50px;
+  }
+
+  .logo2 {
+    height: auto;
+    width: 100%;
+  }
+}
+/* 通常のナビ（PC） */
+.main nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.main nav a {
+  display: inline-block;
+  color: #00CED1;
+  text-decoration: none;
+  font-size: 1.4rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 4px #00CED1;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.main nav a:hover {
+  color: #FF6347;
+  border-color: #FF6347;
+  box-shadow: 0 0 8px #FF6347;
+}
+
+/* レスポンシブ：768px以下で2列に切り替え */
+@media screen and (max-width: 768px) {
+  .main nav ul {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    gap: 1rem 2rem;
+  }
+
+  .main nav a {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+    text-align: center;
   }
 }
