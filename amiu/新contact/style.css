@@ -1,0 +1,317 @@
+/* 全体の背景色 */
+body {
+  background-color: #0a0a23;
+  color: white;
+  font-family: 'Noto Serif JP', serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* ヘッダー */
+@font-face {
+  font-family: 'Hangyaku';
+  src: url('hangyaku-font/Hangyaku-G3rpg.ttf') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* ロゴ → 小さく・目立たない形♡ */
+.logo {
+  height: 40px; /* 小さめで控えめ♡ */
+  padding: 5px 0;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+   position: fixed;
+}
+
+.logo:hover {
+  opacity: 1; /* ホバーでほんのり目立つ♡ */
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+nav a {
+  color: #00CED1;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+   font-family: 'DotGothic16', sans-serif; /* ←これを追加！ */
+  color: var(--cyan);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #FF6347;
+}
+
+/* Hero セクション */
+.hero {
+  background-color: #0a0a23;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.hero-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.6);
+}
+
+/* アニメーション */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadein {
+  animation: fadeIn 1.5s ease-out forwards;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+/* Main セクション */
+main {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h2 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #663399;
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: #00CED1;
+  margin: 10px auto 0;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.gallery img,
+.work-img {
+  width: 300px;
+  border: 2px solid #663399;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.gallery img:hover,
+.work-img:hover {
+  transform: scale(1.05);
+}
+
+/* フッター */
+footer {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: #111;
+  font-size: 0.9em;
+  color: #aaa;
+  margin-top: 60px;
+}
+
+
+/*ここからひとちゃんのコード*/
+body, html {
+  margin: 0; 
+  padding: 0; 
+  height: 100%;
+  color: #00CED1;
+
+   background-image: url('image/アートボード\ 1back.png'); 
+  background-size: cover;     
+  background-position: center; 
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+
+  font-family: 'DotGothic16', sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+  align-items: center;      
+  text-align: center;
+}
+
+.main h1 {
+  
+  margin-bottom: 2rem;
+  color: #fff;
+  text-shadow:
+    0 0 10px #00CED1,
+    0 0 20px #00CED1,
+    0 0 30px #fff;
+}
+
+.sf-underline {
+  position: relative; 
+  display: inline-block;
+  font-family: 'Hangyaku', 'Zen Maru Gothic', serif;
+  color: #0ff;
+  font-size: 4rem;
+  padding-bottom: 10px;
+  overflow: visible; 
+}
+
+.sf-underline {
+  font-size: 6rem !important;
+}
+
+
+
+  
+
+.sf-underline::after {
+  content: "";
+  position: absolute;     
+  left: 50%;         
+  bottom: 0;         
+  height: 2px;
+  width: 100vw;         
+  background: linear-gradient(to right, #00CED1, #fff, transparent);
+  animation: underline-run 1.2s linear infinite;
+  pointer-events: none; 
+  z-index: 10;        
+  transform: translateX(-50vw);
+
+  width: 100%;
+  max-width: 400px;
+
+}
+
+@keyframes underline-run {
+  0% {
+    transform: translateX(-100vw);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}
+
+
+.main nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 3rem;
+}
+
+.main nav a {
+  color: #00CED1;
+  text-decoration: none;
+  font-size: 1.5rem;
+  text-shadow: 0 0 5px #00CED1;
+  transition: color 0.3s ease;
+
+  padding: 0.5rem 1.2rem;      /* ボタンの内側余白 */
+  border: 1px solid rgba(255, 255, 255, 0.7);  /* 細めの枠線 */
+  box-shadow: 0 0 5px #00CED1; 
+  display: inline-block;  
+}
+
+.main nav a:hover {
+  color: #ff6347;
+  text-shadow: 0 0 10px #ff6347;
+  border-color: #ff6347; 
+  box-shadow: 0 0 10px #ff6347;
+}
+.biglogo {
+  text-align: center;
+  margin: 30px auto;
+}
+.biglogo img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+
+@media screen and (max-width: 600px) {
+  .main nav ul {
+    gap: 0.5rem;        /* さらに狭く */
+    padding: 0 0.5rem;  /* 画面端に近づける */
+  }
+
+  .main nav a {
+    font-size: 1rem;
+    padding: 0.2rem 0.6rem;
+  }
+}
+/* 通常のナビ（PC） */
+.main nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.main nav a {
+  display: inline-block;
+  color: #00CED1;
+  text-decoration: none;
+  font-size: 1.4rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 4px #00CED1;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.main nav a:hover {
+  color: #FF6347;
+  border-color: #FF6347;
+  box-shadow: 0 0 8px #FF6347;
+}
+
+/* レスポンシブ：768px以下で2列に切り替え */
+@media screen and (max-width: 768px) {
+  .main nav ul {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    gap: 1rem 2rem;
+  }
+
+  .main nav a {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+    text-align: center;
+  }
+}
